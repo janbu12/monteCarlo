@@ -19,7 +19,7 @@ st.markdown("""
 
 with st.sidebar :
     selected = option_menu('Monte Carlo',
-                           ['1. ', '2. ', '3. ', '4. ', '5. ', '6.'],
+                           ['1.', '2.', '3.', '4.', '5.', '6.'],
                            icons = ["person-circle", "person-workspace", "person-badge-fill", "person-circle", "person-workspace", "person-badge-fill"],
                            menu_icon = "person-lines-fill",
                            default_index = 0,
