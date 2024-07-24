@@ -30,19 +30,19 @@ with st.sidebar :
                                    "nav-link" : {"--hover-color" : "#dc3545"}})
     
 if (selected == '1.') :
-    st.header(f"6.")
+    st.header(f"1.")
     
 if (selected == '2.') :
-    st.header(f"6.")
+    st.header(f"2.")
     
 if (selected == '3.') :
-    st.header(f"6.")
+    st.header(f"3.")
     
 if (selected == '4.') :
-    st.header(f"6.")
+    st.header(f"4.")
     
 if (selected == '5.') :
-    st.header(f"6.")
+    st.header(f"5.")
     
 if (selected == '6.') :
     st.header(f"6.")
