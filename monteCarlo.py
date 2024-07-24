@@ -19,7 +19,7 @@ st.markdown("""
 
 with st.sidebar :
     selected = option_menu('Monte Carlo',
-                           ['1. Deskripsi Model', '2.', '3.', '4.', '5.', '6.'],
+                           ['1. Deskripsi Model', '2. Metode dan Data', '3.', '4.', '5.', '6.'],
                            icons = ["person-circle", "person-workspace", "person-badge-fill", "person-circle", "person-workspace", "person-badge-fill"],
                            menu_icon = "person-lines-fill",
                            default_index = 0,
@@ -30,15 +30,28 @@ with st.sidebar :
                                    "nav-link" : {"--hover-color" : "#dc3545"}})
     
 if (selected == '1. Deskripsi Model') :
-    st.header(f"1. Penjelasan Mengenai Model yang akan dibuat")
+    st.header(f"Penjelasan Mengenai Model yang akan dibuat")
     # with st.expander("Penjelasan Mengenai Model yang akan dibuat") :
     st.write("Untuk mengurangi kemungkinan kekurangan atau kelebihan stok, peramalan penjualan adalah proses perencanaan inventaris agar lebih akurat. Prediksi ini juga mendukung rencana pemasaran dan promosi berdasarkan tren penjualan.")
     st.write("Prediksi kinerja karyawan merupakan proses untuk mengevaluasi kinerja karyawan sehingga dapat mengetahui karyawan dengan kinerja yang baik dan yang kurang baik dalam beberapa waktu ke depan. Sehingga, perusahaan dapat mengambil keputusan untuk memberi penghargaan atau pelatihan tambahan bahkan pemecatan karyawan.")
     st.write("Model prediksi yang akan dibuat menggunakan metode Monte Carlo yang bertujuan untuk melihat jumlah penjualan pertahun, dan kinerja karyawan berdasarkan jumlah transaksi yang ia tangani di masa yang akan datang.")
 
     
-if (selected == '2.') :
-    st.header(f"2.")
+if (selected == '2. Metode dan Data') :
+    st.header(f"Penjelasan Mengenai Metode dan Data yang akan digunakan")
+    tab1 ,tab2, tab3= st.tabs(["Metode", "Langkah - Langkah Metode", "Data"])
+    
+    with tab1:
+        st.write("Metode yang digunakan untuk membuat model prediksi di atas menggunakan Monte Carlo. Metode ini merupakan metode analisis numerik yang melibatkan pengambilan sampel eksperimen bilangan acak. Umum digunakan untuk mensimulasikan sistem pengendalian persediaan. Simulasi dengan metode Monte Carlo adalah bentuk simulasi probabilistik berdasarkan proses randomisasi (acak) yang melibatkan variabel-variabel data yang dikumpulkan berdasarkan data masa lalu maupun distribusi probabilitas teoritis.")
+        
+    with tab2:
+        st.write("Langkah - langkah metode Monte Carlo yang digunakan adalah sebagai berikut:")
+        with st.expander("1. Mengumpulkan Data Historis:") :
+            st.write("""<list>
+                        <li>Mengumpulkan data penjualan.
+                        <li>Mengumpulkan data harga.
+                        <li>Mengumpulkan data transaksi karyawan.
+                    </list>""", unsafe_allow_html=True) 
     
 if (selected == '3.') :
     st.header(f"3.")
