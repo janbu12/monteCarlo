@@ -29,8 +29,13 @@ with st.sidebar :
                                    "icon" : {"font-size" : "20px"},
                                    "nav-link" : {"--hover-color" : "#dc3545"}})
     
-if (selected == '1.') :
-    st.header(f"1.")
+if (selected == '1. Deskripsi Model') :
+    st.header(f"1. Penjelasan Mengenai Model yang akan dibuat")
+    # with st.expander("Penjelasan Mengenai Model yang akan dibuat") :
+    st.write("Untuk mengurangi kemungkinan kekurangan atau kelebihan stok, peramalan penjualan adalah proses perencanaan inventaris agar lebih akurat. Prediksi ini juga mendukung rencana pemasaran dan promosi berdasarkan tren penjualan.")
+    st.write("Prediksi kinerja karyawan merupakan proses untuk mengevaluasi kinerja karyawan sehingga dapat mengetahui karyawan dengan kinerja yang baik dan yang kurang baik dalam beberapa waktu ke depan. Sehingga, perusahaan dapat mengambil keputusan untuk memberi penghargaan atau pelatihan tambahan bahkan pemecatan karyawan.")
+    st.write("Model prediksi yang akan dibuat menggunakan metode Monte Carlo yang bertujuan untuk melihat jumlah penjualan pertahun, dan kinerja karyawan berdasarkan jumlah transaksi yang ia tangani di masa yang akan datang.")
+
     
 if (selected == '2.') :
     st.header(f"2.")
