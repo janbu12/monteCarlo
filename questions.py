@@ -80,7 +80,7 @@ def questionPenjualan(dataset1, dataset2):
         
     with st.container():
         st.write("<h4>Distribusi Frekuensi Untuk Kebutuhan Prediksi</h4>", unsafe_allow_html=True)
-        st.dataframe(boundaries_df)
+        st.dataframe(boundaries_df, hide_index=True, use_container_width=True)
         st.write("<br>", unsafe_allow_html=True)
         
     with st.container():
