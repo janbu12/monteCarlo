@@ -76,19 +76,19 @@ if (selected == '2. Metode dan Data') :
                     """, unsafe_allow_html=True)  
             
     with tab3:
-        with st.container:
+        with st.container():
             st.write("<h2>Data Produk</h2>", unsafe_allow_html=True)
             st.dataframe(produk.head())
             
-        with st.container:
+        with st.container():
             st.write("<h2>Data Penjualan</h2>", unsafe_allow_html=True)
             st.dataframe(penjualan.head())
         
-        with st.container:
+        with st.container():
             st.write("<h2>Data Karyawan</h2>", unsafe_allow_html=True)
             st.dataframe(karyawan.head())
             
-        with st.container:
+        with st.container():
             st.write("<h2>Data Cabang</h2>", unsafe_allow_html=True)
             st.dataframe(cabang.head())
     
