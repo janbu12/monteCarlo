@@ -59,9 +59,24 @@ if (selected == '2. Metode dan Data') :
         with st.expander("1. Mengumpulkan Data Historis:") :
             st.write("""<list>
                         <li>Mengumpulkan data penjualan.
-                        <li>Mengumpulkan data harga.
                         <li>Mengumpulkan data transaksi karyawan.
+                    </list>""", unsafe_allow_html=True)
+        with st.expander("2. Mendefinisikan Distribusi Probabilitas:") :
+            st.write("""<list>
+                        <li>Menganalisis data historis untuk menentukan distribusi probabilitas dari jumlah penjualan, dan jumlah transaksi per karyawan.  
                     </list>""", unsafe_allow_html=True) 
+        with st.expander("3. Mengonversi Distribusi Probabilitas ke Frekuensi Kumulatif:") :
+            st.write("""<list>
+                        <li>Menggunakan distribusi probabilitas untuk membuat tabel frekuensi kumulatif yang akan digunakan sebagai dasar pengelompokkan interval bilangan acak.
+                    </list>""", unsafe_allow_html=True) 
+        with st.expander("4. Menjalankan Simulasi:") :
+            st.write("""<list>
+                        <li>Menggunakan bilangan acak yang dikategorikan sesuai dengan distribusi kumulatif untuk mensimulasikan berbagai skenario jumlah penjualan, perubahan harga, dan kinerja karyawan.
+                    </list>""", unsafe_allow_html=True) 
+        with st.expander("5. Analisis Hasil:") :
+            st.write("""<list>
+                        <li>Menganalisis hasil keluaran simulasi untuk mendapatkan prediksi yang dapat digunakan sebagai dasar pengambilan keputusan.
+                    </list>""", unsafe_allow_html=True)  
     
 if (selected == '3. Simulasi dan Hasil Model') :
     st.header(f"Simulasi untuk Prediksi Penjualan dan Kinerja Karyawan")
