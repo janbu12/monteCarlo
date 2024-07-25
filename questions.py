@@ -102,7 +102,7 @@ def questionPenjualan(dataset1, dataset2):
                             <li>PROD-0000039: rambutan 1 kg</li>
                             <li>PROD-0000020: snack gurih 1 ons</li>
                             <li>PROD-0000020: snack gurih 1 ons</li>
-                        </list></br>
+                        </list><br>
                         Lalu produk dengan prediksi terkecil atau berkemungkinan memiliki penjualan yang stagnand:
                         <list>
                             <li>PROD-0000002: bawang putih 1 kg</li>
@@ -116,7 +116,7 @@ def questionPenjualan(dataset1, dataset2):
                             <li>PROD-0000021: kacang goreng 1 kg</li>
                             <li>PROD-0000027: jeruk 1 kg</li>
                             <li>dll
-                        </list><br>
+                        </list><br><br>
                         Oleh karena itu perusahaan harus memiliki beberapa strategi untuk menangani produk yang berkemungkinan penjualannya stagnand
                      """, unsafe_allow_html=True) 
         
