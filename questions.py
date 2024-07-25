@@ -85,7 +85,7 @@ def questionPenjualan(dataset1, dataset2):
         st.write("<br>", unsafe_allow_html=True)
         
     with st.container():
-        st.write("<h4>Distribusi Frekuensi Untuk Kebutuhan Prediksi</h4>", unsafe_allow_html=True)
+        st.write("<h4>Distribusi Frekuensi dan Distribusi Probabilitas Untuk Kebutuhan Prediksi</h4>", unsafe_allow_html=True)
         st.dataframe(boundaries_df, hide_index=True, use_container_width=True)
         st.write("<br>", unsafe_allow_html=True)
         
@@ -440,11 +440,80 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
 
     desember.loc[:, 'Prediksi'] = desember['Angka Acak'].apply(lambda x: get_prediksi(x, intervalsAcak, intervals))
+    
+    januari = januari[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    februari = februari[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    maret = maret[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    april = april[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    mei = mei[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    juni = juni[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    juli = juli[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    agustus = agustus[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    september = september[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    oktober = oktober[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    november = november[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
+    desember = desember[['kode_kasir', 'nama_lengkap', 'nama_cabang', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]    
 
     with st.container():
         st.write("<h4>Hasil penggabungan data penjualan produk, karyawan, dan cabang, lalu menjumlahkan semua transaksi berdasarkan bulan</h4>", unsafe_allow_html=True)
         st.dataframe(pivot_table, use_container_width=True, hide_index=True)
-        # st.write("<br>", unsafe_allow_html=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+    with st.container():
+        st.write("<h4>Distribusi Frekuensi dan Distribusi Probabilitas Untuk Kebutuhan Prediksi</h4>", unsafe_allow_html=True)
+        st.dataframe(boundaries_df_karyawan, hide_index=True, use_container_width=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+    with st.container():
+        st.write("<h2>Hasil Model Simulasi Prediksi Kinerja Karyawan Berdasarkan Banyaknya Transaksi Menggunakan LCG</h2>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Januari</h4>", unsafe_allow_html=True)
+        st.dataframe(januari, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Februari</h4>", unsafe_allow_html=True)
+        st.dataframe(februari, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Maret</h4>", unsafe_allow_html=True)
+        st.dataframe(maret, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan April</h4>", unsafe_allow_html=True)
+        st.dataframe(april, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Mei</h4>", unsafe_allow_html=True)
+        st.dataframe(mei, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Juni</h4>", unsafe_allow_html=True)
+        st.dataframe(juni, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Juli</h4>", unsafe_allow_html=True)
+        st.dataframe(juli, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Agustus</h4>", unsafe_allow_html=True)
+        st.dataframe(agustus, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan September</h4>", unsafe_allow_html=True)
+        st.dataframe(september, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Oktober</h4>", unsafe_allow_html=True)
+        st.dataframe(oktober, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan November</h4>", unsafe_allow_html=True)
+        st.dataframe(november, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
+        
+        st.write("<h4>Bulan Desember</h4>", unsafe_allow_html=True)
+        st.dataframe(desember, use_container_width=True, hide_index=True)
+        st.write("<br>", unsafe_allow_html=True)
         
     
         
