@@ -31,11 +31,11 @@ with st.sidebar :
                            menu_icon = "bi bi-pie-chart-fill",
                            default_index = 0,
                            styles={"nav" : {"font-family" : 'Poppins'},
-                                   "nav-link": {"display":"flex", "align-items": "center"},
+                                #    "nav-link": {"display":"flex", "align-items": "center"},
                                    "menu-title" : {"font-family" : 'Poppins', "font-weight" : "700"},
                                    "nav-link-selected" : {"font-weight" : "700", "background-color" : "#dc3545"},
                                    "icon" : {"font-size" : "30px"},
-                                   "nav-link" : {"--hover-color" : "#dc3545"}})
+                                   "nav-link" : {"--hover-color" : "#dc3545", "display":"flex", "align-items":"center"}})
     
 if (selected == '1. Deskripsi Model') :
     st.header(f"Penjelasan Mengenai Model yang akan dibuat")
