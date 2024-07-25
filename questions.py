@@ -15,7 +15,7 @@ def get_prediksi(angka_acak, intervalsAcak, intervals):
 
 
 def questionPenjualan(dataset1, dataset2):
-    st.write("<h3>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan</h3>", unsafe_allow_html=True)
+    # st.write("<h3>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan</h3>", unsafe_allow_html=True)
     
     penjualan_produk = dataset2.merge(dataset1, on='kode_produk', suffixes=('_penjualan', '_produk'), validate='m:1')
     penjualan_produk = penjualan_produk.groupby(['kode_produk', 'nama_produk'])['jumlah_pembelian'].sum().reset_index()
@@ -91,7 +91,7 @@ def questionPenjualan(dataset1, dataset2):
         st.write("<br>", unsafe_allow_html=True)
         
         
-    with st.expander("Kesimpulan dari Simulasi diatas:") :
+    with st.expander("Kesimpulan dari Model Simulasi diatas:") :
             st.write("""
                         Kesimpulannya adalah produk dengan prediksi tertinggi atau berkemungkinan memiliki penjualan yang baik:
                         <list>
