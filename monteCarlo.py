@@ -28,12 +28,12 @@ with st.sidebar :
     selected = option_menu('Monte Carlo',
                            ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4. Identitas Kelompok'],
                            icons = ["bi bi-box-seam-fill", "bi bi-bar-chart-steps", "bi bi-clipboard-data-fill", "bi bi-person-vcard-fill"],
-                           menu_icon = "person-lines-fill",
+                           menu_icon = "bi bi-pie-chart-fill",
                            default_index = 0,
                            styles={"nav" : {"font-family" : 'Poppins'},
                                    "menu-title" : {"font-family" : 'Poppins', "font-weight" : "700"},
                                    "nav-link-selected" : {"font-weight" : "700", "background-color" : "#dc3545"},
-                                   "icon" : {"font-size" : "20px"},
+                                   "icon" : {"font-size" : "30px"},
                                    "nav-link" : {"--hover-color" : "#dc3545"}})
     
 if (selected == '1. Deskripsi Model') :
