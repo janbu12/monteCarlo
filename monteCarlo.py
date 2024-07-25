@@ -113,8 +113,8 @@ if (selected == '4. Identitas Kelompok') :
     st.write("""
                 <list>
                     <li>Muhamad Singgih Prasetyo    - 10122095</li>
-                    <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
                     <li>Muhammad Mizan Al Mujadid   - 10122096</li>
+                    <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
                     <li>Muhammad Raffy Abdillah              - 10122099</li>
                 </list> 
              """, unsafe_allow_html=True)
