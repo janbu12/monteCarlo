@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st, pandas as pd
 from streamlit_option_menu import option_menu
 
 from questions import *
