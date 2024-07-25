@@ -31,8 +31,8 @@ with st.sidebar :
                            menu_icon = "bi bi-pie-chart-fill",
                            default_index = 0,
                            styles={"nav" : {"font-family" : 'Poppins'},
-                                #    "nav-link": {"display":"flex", "align-items": "center"},
-                                   "menu-title" : {"font-family" : 'Poppins', "font-weight" : "700"},
+                                   "menu-title" : {"font-family" : 'Poppins', "font-weight" : "700", "font-size":"30px"},
+                                   "menu-icon": {"font-size": "30px"},
                                    "nav-link-selected" : {"font-weight" : "700", "background-color" : "#dc3545"},
                                    "icon" : {"font-size" : "30px"},
                                    "nav-link" : {"--hover-color" : "#dc3545", "display":"flex", "align-items":"center", "gap": "1rem"}})
@@ -111,8 +111,8 @@ if (selected == '4. Identitas Kelompok') :
     st.header("Identitas Kelompok")
     st.write("""
                 <list>
-                    <li>Muhamad Singgih Prasetyo</li>
-                    <li>Muhammad Mizan Al Mujadid</li>
-                    <li>Raffy Abdillah</li>
+                    <li>Muhamad Singgih Prasetyo    - 10122095</li>
+                    <li>Muhammad Mizan Al Mujadid   - 10122096</li>
+                    <li>Raffy Abdillah              - 10122099</li>
                 </list> 
              """, unsafe_allow_html=True)

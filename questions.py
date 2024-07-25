@@ -9,7 +9,7 @@ def lcg(seed, a, c, m, n):
 
 def get_prediksi(angka_acak, intervalsAcak, intervals):
     for (lower_acak, upper_acak), (lower, upper) in zip(intervalsAcak, intervals):
-        if lower_acak <= angka_acak < upper_acak:
+        if lower_acak <= angka_acak <= upper_acak:
             return np.ceil((lower + upper) / 2)
     return np.nan
 
@@ -45,8 +45,14 @@ def questionPenjualan(dataset1, dataset2):
     total_random_numbers = 100
     boundaries_df['Jumlah Angka Acak'] = (total_random_numbers * boundaries_df['Probabilitas Kumulatif']).round().astype(int)
 
-    boundaries_df['Batas Bawah Acak'] = np.concatenate(([0], boundaries_df['Jumlah Angka Acak'].iloc[:-1].values))
+    # Menghitung interval angka acak
+    # boundaries_df['Interval Angka Acak'] = boundaries_df['Jumlah Angka Acak'].cumsum()
+
+    # Menentukan batas bawah acak dan batas atas acak
+    boundaries_df['Batas Bawah Acak'] = np.concatenate(([0], boundaries_df['Jumlah Angka Acak'].iloc[:-1].values + 1))
     boundaries_df['Batas Atas Acak'] = boundaries_df['Jumlah Angka Acak']
+
+    # Menampilkan DataFrame hasil
     
     a = 1664525
     c = 1013904223
