@@ -444,7 +444,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     with st.container():
         st.write("<h4>Hasil penggabungan data penjualan produk, karyawan, dan cabang, lalu menjumlahkan semua transaksi berdasarkan bulan</h4>", unsafe_allow_html=True)
         st.dataframe(pivot_table, use_container_width=True, hide_index=True)
-        st.write("<br>", unsafe_allow_html=True)
+        # st.write("<br>", unsafe_allow_html=True)
         
     
         
