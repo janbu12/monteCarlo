@@ -78,18 +78,22 @@ if (selected == '2. Metode dan Data') :
     with tab3:
         with st.container():
             st.write("<h2>Data Produk</h2>", unsafe_allow_html=True)
+            st.write("Ini merupakan data head dari data produk", unsafe_allow_html=True)
             st.dataframe(produk.head())
             
         with st.container():
             st.write("<h2>Data Penjualan</h2>", unsafe_allow_html=True)
+            st.write("Ini merupakan data head dari data penjualan", unsafe_allow_html=True)
             st.dataframe(penjualan.head())
         
         with st.container():
             st.write("<h2>Data Karyawan</h2>", unsafe_allow_html=True)
+            st.write("Ini merupakan data head dari data karyawan", unsafe_allow_html=True)
             st.dataframe(karyawan.head())
             
         with st.container():
             st.write("<h2>Data Cabang</h2>", unsafe_allow_html=True)
+            st.write("Ini merupakan data head dari data cabang", unsafe_allow_html=True)
             st.dataframe(cabang.head())
     
 if (selected == '3. Simulasi dan Hasil Model') :
