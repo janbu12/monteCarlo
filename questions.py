@@ -15,7 +15,7 @@ def get_prediksi(angka_acak, intervalsAcak, intervals):
 
 
 def questionPenjualan(dataset1, dataset2):
-    st.write("<h2>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan<h2>", unsafe_allow_html=True)
+    st.write("<h3>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan</h3>", unsafe_allow_html=True)
     
     penjualan_produk = dataset2.merge(dataset1, on='kode_produk', suffixes=('_penjualan', '_produk'), validate='m:1')
     penjualan_produk = penjualan_produk.groupby(['kode_produk', 'nama_produk'])['jumlah_pembelian'].sum().reset_index()
