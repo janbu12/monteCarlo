@@ -82,7 +82,7 @@ def questionPenjualan(dataset1, dataset2):
         st.dataframe(boundaries_df)
         
     with st.container():
-        st.write("<h4>Simulasi Prediksi Menggunakan LCG</h4>", unsafe_allow_html=True)
+        st.write("<h4>Hasil Model Simulasi Prediksi Penjualan Produk Menggunakan LCG</h4>", unsafe_allow_html=True)
         st.dataframe(simulasiPrediksi.style.highlight_max(subset='Prediksi', axis=0, color='#198754')
                      .highlight_min(subset='Prediksi', axis=0, color='#dc3545'), 
                      use_container_width=True, hide_index=True)

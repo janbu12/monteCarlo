@@ -29,7 +29,7 @@ st.markdown("""
 
 with st.sidebar :
     selected = option_menu('Monte Carlo',
-                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi', '4.', '5.', '6.'],
+                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4.', '5.', '6.'],
                            icons = ["person-circle", "person-workspace", "person-badge-fill", "person-circle", "person-workspace", "person-badge-fill"],
                            menu_icon = "person-lines-fill",
                            default_index = 0,
@@ -63,7 +63,7 @@ if (selected == '2. Metode dan Data') :
                         <li>Mengumpulkan data transaksi karyawan.
                     </list>""", unsafe_allow_html=True) 
     
-if (selected == '3. Simulasi') :
+if (selected == '3. Simulasi dan Hasil Model') :
     st.header(f"Simulasi untuk Prediksi Penjualan dan Kinerja Karyawan")
     tab1, tab2 = st.tabs(["Prediksi Penjualan", "Prediksi Kinerja Karyawan"])
     
