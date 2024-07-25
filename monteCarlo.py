@@ -10,11 +10,8 @@ def load_data(url) :
 
 penjualan = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/tr_penjualan.xlsx")
 produk = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
-# karyawan = pd.read_excel("./datasets/ms_karyawan.xlsx")
-# kategori = pd.read_excel("./datasets/ms_kategori.xlsx")
-# kota = pd.read_excel("./datasets/ms_kota.xlsx")
-# propinsi = pd.read_excel("./datasets/ms_propinsi.xlsx")
-# cabang = pd.read_excel("./datasets/ms_cabang.xlsx")
+karyawan = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
+cabang = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
 
 st.markdown("""
     <header>
@@ -62,21 +59,38 @@ if (selected == '2. Metode dan Data') :
                         <li>Mengumpulkan data transaksi karyawan.
                     </list>""", unsafe_allow_html=True)
         with st.expander("2. Mendefinisikan Distribusi Probabilitas:") :
-            st.write("""<list>
-                        <li>Menganalisis data historis untuk menentukan distribusi probabilitas dari jumlah penjualan, dan jumlah transaksi per karyawan.  
-                    </list>""", unsafe_allow_html=True) 
+            st.write("""
+                        Menganalisis data historis untuk menentukan distribusi probabilitas dari jumlah penjualan, dan jumlah transaksi per karyawan.  
+                    """, unsafe_allow_html=True) 
         with st.expander("3. Mengonversi Distribusi Probabilitas ke Frekuensi Kumulatif:") :
-            st.write("""<list>
-                        <li>Menggunakan distribusi probabilitas untuk membuat tabel frekuensi kumulatif yang akan digunakan sebagai dasar pengelompokkan interval bilangan acak.
-                    </list>""", unsafe_allow_html=True) 
+            st.write("""
+                        Menggunakan distribusi probabilitas untuk membuat tabel frekuensi kumulatif yang akan digunakan sebagai dasar pengelompokkan interval bilangan acak.
+                    """, unsafe_allow_html=True) 
         with st.expander("4. Menjalankan Simulasi:") :
-            st.write("""<list>
-                        <li>Menggunakan bilangan acak yang dikategorikan sesuai dengan distribusi kumulatif untuk mensimulasikan berbagai skenario jumlah penjualan, perubahan harga, dan kinerja karyawan.
-                    </list>""", unsafe_allow_html=True) 
+            st.write("""
+                        Menggunakan bilangan acak yang dikategorikan sesuai dengan distribusi kumulatif untuk mensimulasikan berbagai skenario jumlah penjualan, perubahan harga, dan kinerja karyawan.
+                    """, unsafe_allow_html=True) 
         with st.expander("5. Analisis Hasil:") :
-            st.write("""<list>
-                        <li>Menganalisis hasil keluaran simulasi untuk mendapatkan prediksi yang dapat digunakan sebagai dasar pengambilan keputusan.
-                    </list>""", unsafe_allow_html=True)  
+            st.write("""
+                        Menganalisis hasil keluaran simulasi untuk mendapatkan prediksi yang dapat digunakan sebagai dasar pengambilan keputusan.
+                    """, unsafe_allow_html=True)  
+            
+    with tab3:
+        with st.container:
+            st.write("<h2>Data Produk</h2>", unsafe_allow_html=True)
+            st.dataframe(produk.head())
+            
+        with st.container:
+            st.write("<h2>Data Penjualan</h2>", unsafe_allow_html=True)
+            st.dataframe(penjualan.head())
+        
+        with st.container:
+            st.write("<h2>Data Karyawan</h2>", unsafe_allow_html=True)
+            st.dataframe(karyawan.head())
+            
+        with st.container:
+            st.write("<h2>Data Cabang</h2>", unsafe_allow_html=True)
+            st.dataframe(cabang.head())
     
 if (selected == '3. Simulasi dan Hasil Model') :
     st.header(f"Simulasi untuk Prediksi Penjualan dan Kinerja Karyawan")
