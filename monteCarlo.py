@@ -3,8 +3,16 @@ from streamlit_option_menu import option_menu
 
 @st.cache_data
 def load_data(url) :
-    df = pd.read_csv(url)
+    df = pd.read_excel(url)
     return df
+
+penjualan       = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/tr_penjualan.xlsx")
+produk          = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
+karyawan        = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_karyawan.xlsx")
+cabang          = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_cabang.xlsx")
+# kategori         = load_data("https://raw.githubusercontent.com/janbu12/FuzzyWuzzy/main/dataset/shipped_orders.csv")
+# kota            = load_data("https://raw.githubusercontent.com/janbu12/FuzzyWuzzy/main/dataset/order_items.csv")
+# propinsi = load_data("https://raw.githubusercontent.com/janbu12/FuzzyWuzzy/main/dataset/Geolocation_merging.csv")
 
 st.markdown("""
     <header>
