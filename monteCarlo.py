@@ -125,7 +125,7 @@ if (selected == '4. Identitas Kelompok') :
             st.write("""
                         <div style="display: flex; flex-direction: column; align-items:center; justify-content: center;">
                                 <h4>Muhammad Mizan Al Mujadid   - 10122096</h4>
-                                <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
+                                <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="width:auto;">
                         </div>
                     """, unsafe_allow_html=True)
 
