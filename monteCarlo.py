@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+from questions import *
+
 @st.cache_data
 def load_data(url) :
     df = pd.read_excel(url)
@@ -27,7 +29,7 @@ st.markdown("""
 
 with st.sidebar :
     selected = option_menu('Monte Carlo',
-                           ['1. Deskripsi Model', '2. Metode dan Data', '3.', '4.', '5.', '6.'],
+                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi', '4.', '5.', '6.'],
                            icons = ["person-circle", "person-workspace", "person-badge-fill", "person-circle", "person-workspace", "person-badge-fill"],
                            menu_icon = "person-lines-fill",
                            default_index = 0,
@@ -61,8 +63,15 @@ if (selected == '2. Metode dan Data') :
                         <li>Mengumpulkan data transaksi karyawan.
                     </list>""", unsafe_allow_html=True) 
     
-if (selected == '3.') :
-    st.header(f"3.")
+if (selected == '3. Simulasi') :
+    st.header(f"Simulasi untuk Prediksi Penjualan dan Kinerja Karyawan")
+    tab1, tab2 = st.tabs(["Prediksi Penjualan", "Prediksi Kinerja Karyawan"])
+    
+    with tab1:
+        questionPenjualan(produk, penjualan)
+        
+    # with tab2:
+        
     
 if (selected == '4.') :
     st.header(f"4.")
