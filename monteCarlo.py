@@ -5,12 +5,12 @@ from questions import *
 
 @st.cache_data
 def load_data(url) :
-    df = pd.read_excel(url)
+    df = pd.read_excel(url, engine='openpyxl')
     return df
 
-penjualan = pd.read_excel("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/tr_penjualan.xlsx")
-produk = pd.read_excel("./datasets/ms_produk.xlsx")
-karyawan = pd.read_excel("./datasets/ms_karyawan.xlsx")
+penjualan = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/tr_penjualan.xlsx")
+produk = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
+# karyawan = pd.read_excel("./datasets/ms_karyawan.xlsx")
 # kategori = pd.read_excel("./datasets/ms_kategori.xlsx")
 # kota = pd.read_excel("./datasets/ms_kota.xlsx")
 # propinsi = pd.read_excel("./datasets/ms_propinsi.xlsx")
