@@ -27,7 +27,7 @@ st.markdown("""
 with st.sidebar :
     selected = option_menu('Monte Carlo',
                            ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4. Identitas Kelompok'],
-                           icons = ["person-circle", "bi bi-bar-chart-steps", "person-badge-fill", "person-circle", "person-workspace", "person-badge-fill"],
+                           icons = ["bi bi-box-seam-fill", "bi bi-bar-chart-steps", "bi bi-clipboard-data-fill", "bi bi-person-vcard-fill"],
                            menu_icon = "person-lines-fill",
                            default_index = 0,
                            styles={"nav" : {"font-family" : 'Poppins'},
