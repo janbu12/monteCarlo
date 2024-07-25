@@ -120,8 +120,7 @@ def questionPenjualan(dataset1, dataset2):
                             <li>PROD-0000021: kacang goreng 1 kg</li>
                             <li>PROD-0000027: jeruk 1 kg</li>
                             <li>dll
-                        </list><br><br>
-                        Oleh karena itu perusahaan harus memiliki beberapa strategi untuk menangani produk yang berkemungkinan penjualannya stagnand
+                        </list><br>Oleh karena itu perusahaan harus memiliki beberapa strategi untuk menangani produk yang berkemungkinan penjualannya stagnand
                      """, unsafe_allow_html=True) 
         
     
