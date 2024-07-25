@@ -35,7 +35,7 @@ with st.sidebar :
                                    "menu-title" : {"font-family" : 'Poppins', "font-weight" : "700"},
                                    "nav-link-selected" : {"font-weight" : "700", "background-color" : "#dc3545"},
                                    "icon" : {"font-size" : "30px"},
-                                   "nav-link" : {"--hover-color" : "#dc3545", "display":"flex", "align-items":"center"}})
+                                   "nav-link" : {"--hover-color" : "#dc3545", "display":"flex", "align-items":"center", "gap": "5px"}})
     
 if (selected == '1. Deskripsi Model') :
     st.header(f"Penjelasan Mengenai Model yang akan dibuat")
