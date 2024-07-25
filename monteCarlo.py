@@ -8,7 +8,7 @@ def load_data(url) :
     df = pd.read_excel(url)
     return df
 
-penjualan = pd.read_excel("./datasets/tr_penjualan.xlsx")
+penjualan = pd.read_excel("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/tr_penjualan.xlsx")
 produk = pd.read_excel("./datasets/ms_produk.xlsx")
 karyawan = pd.read_excel("./datasets/ms_karyawan.xlsx")
 # kategori = pd.read_excel("./datasets/ms_kategori.xlsx")
