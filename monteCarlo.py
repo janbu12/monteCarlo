@@ -111,10 +111,16 @@ if (selected == '3. Simulasi dan Hasil Model') :
 if (selected == '4. Identitas Kelompok') :
     st.header("Identitas Kelompok")
     st.write("""
-                <list>
-                    <li>Muhamad Singgih Prasetyo    - 10122095</li>
-                    <li>Muhammad Mizan Al Mujadid   - 10122096</li>
-                    <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
-                    <li>Muhammad Raffy Abdillah              - 10122099</li>
-                </list> 
+                <div style="display: flex; flex-direction: column; align-items:center">
+                    <div>
+                        <h2>Muhamad Singgih Prasetyo    - 10122095</h2>
+                    </di>
+                    <div>
+                        <h2>Muhammad Mizan Al Mujadid   - 10122096</h2>
+                        <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
+                    </div>
+                    <div>
+                        <h2>Muhammad Raffy Abdillah     - 10122099</h2>
+                    </div>
+                <div> 
              """, unsafe_allow_html=True)
