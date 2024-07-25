@@ -110,7 +110,7 @@ if (selected == '3. Simulasi dan Hasil Model') :
     
 if (selected == '4. Identitas Kelompok') :
     st.header("Identitas Kelompok")
-    tab1, tab2, tab3 = st.tab(["10122095", "10122096", "10122099"])
+    tab1, tab2, tab3 = st.tabs(["10122095", "10122096", "10122099"])
 
     with tab1:
         with st.container():
