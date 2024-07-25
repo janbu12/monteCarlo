@@ -111,7 +111,7 @@ if (selected == '3. Simulasi dan Hasil Model') :
 if (selected == '4. Identitas Kelompok') :
     st.header("Identitas Kelompok")
     st.write("""
-                <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem;">
+                <div style="display: flex; flex-direction: row; align-items:center; justify-content: center; gap: 1rem;">
                     <div>
                         <h2>Muhamad Singgih Prasetyo    - 10122095</h2>
                     </di>
