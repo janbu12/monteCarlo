@@ -114,6 +114,6 @@ if (selected == '4. Identitas Kelompok') :
                 <list>
                     <li>Muhamad Singgih Prasetyo    - 10122095</li>
                     <li>Muhammad Mizan Al Mujadid   - 10122096</li>
-                    <li>Raffy Abdillah              - 10122099</li>
+                    <li>Muhammad Raffy Abdillah              - 10122099</li>
                 </list> 
              """, unsafe_allow_html=True)
