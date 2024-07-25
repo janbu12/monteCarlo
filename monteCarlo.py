@@ -116,7 +116,7 @@ if (selected == '4. Identitas Kelompok') :
                         <div>
                             <h4>Muhamad Singgih Prasetyo    - 10122095</h4>
                         </di>
-                        <div>
+                        <div style="display: flex; flex-direction: column; align-items:center; justify-content: center;">
                             <h4>Muhammad Mizan Al Mujadid   - 10122096</h4>
                             <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
                         </div>
