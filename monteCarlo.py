@@ -8,13 +8,13 @@ def load_data(url) :
     df = pd.read_excel(url)
     return df
 
-penjualan       = load_data("./datasets/tr_penjualan.xlsx")
-produk          = load_data("./datasets/ms_produk.xlsx")
-karyawan        = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_karyawan.xlsx")
-cabang          = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_cabang.xlsx")
-# kategori         = load_data("https://raw.githubusercontent.com/janbu12/FuzzyWuzzy/main/dataset/shipped_orders.csv")
-# kota            = load_data("https://raw.githubusercontent.com/janbu12/FuzzyWuzzy/main/dataset/order_items.csv")
-# propinsi = load_data("https://raw.githubusercontent.com/janbu12/FuzzyWuzzy/main/dataset/Geolocation_merging.csv")
+penjualan = pd.read_excel("./datasets/tr_penjualan.xlsx")
+produk = pd.read_excel("./datasets/ms_produk.xlsx")
+karyawan = pd.read_excel("./datasets/ms_karyawan.xlsx")
+# kategori = pd.read_excel("./datasets/ms_kategori.xlsx")
+# kota = pd.read_excel("./datasets/ms_kota.xlsx")
+# propinsi = pd.read_excel("./datasets/ms_propinsi.xlsx")
+# cabang = pd.read_excel("./datasets/ms_cabang.xlsx")
 
 st.markdown("""
     <header>
