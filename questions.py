@@ -87,6 +87,39 @@ def questionPenjualan(dataset1, dataset2):
                      .highlight_min(subset='Prediksi', axis=0, color='#dc3545'), 
                      use_container_width=True, hide_index=True)
         
+    with st.expander("Kesimpulan dari Simulasi diatas:") :
+            st.write("""
+                        Kesimpulannya adalah produk dengan prediksi tertinggi atau berkemungkinan memiliki penjualan yang baik:
+                        <list>
+                            <li>PROD-0000001: bawang merah 1kg</li>
+                            <li>PROD-0000007: ketimun 1 kg</li>
+                            <li>PROD-0000010: ubi kayu basah 1 kg</li>
+                            <li>PROD-0000014: telur ayam ras 1 kg</li>
+                            <li>PROD-0000020: snack gurih 1 ons</li>
+                            <li>PROD-0000022: kacang mete 1 kg</li>
+                            <li>PROD-0000029: alpukat 1 kg</li>
+                            <li>PROD-0000036: nangka 1 kg</li>
+                            <li>PROD-0000039: rambutan 1 kg</li>
+                            <li>PROD-0000020: snack gurih 1 ons</li>
+                            <li>PROD-0000020: snack gurih 1 ons</li>
+                        </list></br>
+                        Lalu produk dengan prediksi terkecil atau berkemungkinan memiliki penjualan yang stagnand:
+                        <list>
+                            <li>PROD-0000002: bawang putih 1 kg</li>
+                            <li>PROD-0000003: buncis 1 kg</li>
+                            <li>PROD-0000004: kacang panjang 1 kg</li>
+                            <li>PROD-0000006: kentang 1 kg</li>
+                            <li>PROD-0000009: tomat 1 kg</li>
+                            <li>PROD-0000011: ubi jalar 1 kg</li>
+                            <li>PROD-0000013: susu kotak (800 ml)</li>
+                            <li>PROD-0000015: telur ayam kampung 1 kg</li>
+                            <li>PROD-0000021: kacang goreng 1 kg</li>
+                            <li>PROD-0000027: jeruk 1 kg</li>
+                            <li>dll
+                        </list>
+                        Oleh karena itu perusahaan harus memiliki beberapa strategi untuk menangani produk yang berkemungkinan penjualannya stagnand
+                     """, unsafe_allow_html=True) 
+        
     
         
         
