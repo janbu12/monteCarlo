@@ -26,7 +26,7 @@ st.markdown("""
 
 with st.sidebar :
     selected = option_menu('Monte Carlo',
-                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4.', '5.', '6.'],
+                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4. Identitas Kelompok'],
                            icons = ["person-circle", "person-workspace", "person-badge-fill", "person-circle", "person-workspace", "person-badge-fill"],
                            menu_icon = "person-lines-fill",
                            default_index = 0,
@@ -106,12 +106,12 @@ if (selected == '3. Simulasi dan Hasil Model') :
     # with tab2:
         
     
-if (selected == '4.') :
-    st.header(f"4.")
-    
-if (selected == '5.') :
-    st.header(f"5.")
-    
-if (selected == '6.') :
-    st.header(f"6.")
-    
+if (selected == '4. Identitas Kelompok') :
+    st.header("Identitas Kelompok")
+    st.write("""
+                <list>
+                    <li>Muhamad Singgih Prasetyo</li>
+                    <li>Muhammad Mizan Al Mujadid</li>
+                    <li>Raffy Abdillah</li>
+                </list> 
+             """, unsafe_allow_html=True)
