@@ -10,8 +10,8 @@ def load_data(url) :
 
 penjualan = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/tr_penjualan.xlsx")
 produk = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
-karyawan = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
-cabang = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_produk.xlsx")
+karyawan = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_karyawan.xlsx")
+cabang = load_data("https://raw.githubusercontent.com/janbu12/monteCarlo/main/datasets/ms_cabang.xlsx")
 
 st.markdown("""
     <header>
@@ -104,7 +104,8 @@ if (selected == '3. Simulasi dan Hasil Model') :
     with tab1:
         questionPenjualan(produk, penjualan)
         
-    # with tab2:
+    with tab2:
+        questionKaryawan(karyawan, penjualan, cabang)
         
     
 if (selected == '4. Identitas Kelompok') :
