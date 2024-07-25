@@ -66,8 +66,6 @@ def questionPenjualan(dataset1, dataset2):
     penjualan_produk['Prediksi'] = penjualan_produk['Angka Acak'].apply(lambda x: get_prediksi(x, intervalsAcak, intervals))
     
     with st.container():
-        st.dataframe(penjualan_produk.style.highlight_max(subset='jumlah_penjualan', axis=0, color='#198754')
-                     .highlight_min(subset='jumlah_penjualan', axis=0, color='#dc3545'), 
-                     use_container_width=True, hide_index=True)
+        st.dataframe(penjualan_produk)
     
     
