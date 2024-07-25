@@ -15,7 +15,7 @@ def get_prediksi(angka_acak, intervalsAcak, intervals):
 
 
 def questionPenjualan(dataset1, dataset2):
-    st.write("<h4>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan<h4>", unsafe_allow_html=True)
+    st.write("<h2>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan<h2>", unsafe_allow_html=True)
     
     penjualan_produk = dataset2.merge(dataset1, on='kode_produk', suffixes=('_penjualan', '_produk'), validate='m:1')
     penjualan_produk = penjualan_produk.groupby(['kode_produk', 'nama_produk'])['jumlah_pembelian'].sum().reset_index()
@@ -73,7 +73,9 @@ def questionPenjualan(dataset1, dataset2):
     
     with st.container():
         st.write("<h4>Hasil penggabungan data produk dan penjualan produk, lalu menjumlahkan semua penjualannya</h4>", unsafe_allow_html=True)
-        st.dataframe(penjualan_setahun)
+        st.dataframe(penjualan_setahun.highlight_max(subset='jumlah_pembelian', axis=0, color='#198754')
+                     .highlight_min(subset='jumlah_pembelian', axis=0, color='#dc3545'), 
+                     use_container_width=True, hide_index=True)
         
     with st.container():
         st.write("<h4>Distribusi Frekuensi Untuk Kebutuhan Prediksi</h4>", unsafe_allow_html=True)
@@ -81,7 +83,11 @@ def questionPenjualan(dataset1, dataset2):
         
     with st.container():
         st.write("<h4>Simulasi Prediksi Menggunakan LCG</h4>", unsafe_allow_html=True)
-        st.dataframe(simulasiPrediksi)
+        st.dataframe(simulasiPrediksi.highlight_max(subset='Prediksi', axis=0, color='#198754')
+                     .highlight_min(subset='Prediksi', axis=0, color='#dc3545'), 
+                     use_container_width=True, hide_index=True)
+        
+    
         
         
     
