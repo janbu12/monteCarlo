@@ -67,7 +67,22 @@ def questionPenjualan(dataset1, dataset2):
     
     penjualan_setahun = penjualan_produk[['kode_produk', 'nama_produk', 'jumlah_pembelian']]
     
+    simulasiPrediksi = penjualan_produk[['kode_produk', 'nama_produk', 'Zi-1', 'Zi', 'Angka Acak', 'Prediksi']]
+    
+    
+    
     with st.container():
+        st.write("<h4>Hasil penggabungan data produk dan penjualan produk, lalu menjumlahkan semua penjualannya</h4>", unsafe_allow_html=True)
         st.dataframe(penjualan_setahun)
+        
+    with st.container():
+        st.write("<h4>Distribusi Frekuensi Untuk Kebutuhan Prediksi</h4>", unsafe_allow_html=True)
+        st.dataframe(boundaries_df)
+        
+    with st.container():
+        st.write("<h4>Simulasi Prediksi Menggunakan LCG</h4>", unsafe_allow_html=True)
+        st.dataframe(simulasiPrediksi)
+        
+        
     
     
