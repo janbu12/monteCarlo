@@ -65,7 +65,9 @@ def questionPenjualan(dataset1, dataset2):
 
     penjualan_produk['Prediksi'] = penjualan_produk['Angka Acak'].apply(lambda x: get_prediksi(x, intervalsAcak, intervals))
     
+    penjualan_setahun = penjualan_produk[['kode_produk', 'nama_produk', 'jumlah_pembelian']]
+    
     with st.container():
-        st.dataframe(penjualan_produk)
+        st.dataframe(penjualan_setahun)
     
     
