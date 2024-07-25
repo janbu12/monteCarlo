@@ -110,18 +110,21 @@ if (selected == '3. Simulasi dan Hasil Model') :
     
 if (selected == '4. Identitas Kelompok') :
     st.header("Identitas Kelompok")
-    with st.container():
-        st.write("""
-                    <div style="display: flex; flex-direction: row; align-items:center; justify-content: center; gap: 1rem;">
-                        <div>
-                            <h4>Muhamad Singgih Prasetyo    - 10122095</h4>
-                        </di>
-                        <div style="display: flex; flex-direction: column; align-items:center; justify-content: center;">
-                            <h4>Muhammad Mizan Al Mujadid   - 10122096</h4>
-                            <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
-                        </div>
-                        <div>
-                            <h4>Muhammad Raffy Abdillah     - 10122099</h4>
-                        </div>
-                    <div> 
-                """, unsafe_allow_html=True)
+    tab1, tab2, tab3 = st.tab(["10122095", "10122096", "10122099"])
+
+    with tab1:
+        with st.container():
+            st.write("""
+                        <div style="display: flex; flex-direction: row; align-items:center; justify-content: center; gap: 1rem;">
+                            <div>
+                                <h4>Muhamad Singgih Prasetyo    - 10122095</h4>
+                            </di>
+                            <div style="display: flex; flex-direction: column; align-items:center; justify-content: center;">
+                                <h4>Muhammad Mizan Al Mujadid   - 10122096</h4>
+                                <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="max-height:200px;">
+                            </div>
+                            <div>
+                                <h4>Muhammad Raffy Abdillah     - 10122099</h4>
+                            </div>
+                        <div> 
+                    """, unsafe_allow_html=True)
