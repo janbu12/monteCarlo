@@ -24,10 +24,6 @@ st.markdown("""
     </header>
     <style>
         html, body, h1, h2, h3, p, b, nav-link [class*="css"] {font-family: 'Poppins', sans-serif;}
-        
-        .css-1gk0m6a {
-            min-width: 400px;  /* Atur lebar minimum sesuai kebutuhan */
-        }
     </style>
 """, unsafe_allow_html=True)
 
