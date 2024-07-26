@@ -115,7 +115,7 @@ if (selected == '4. Identitas Kelompok') :
     with tab1:
         with st.container():
             st.write("""
-                        <div style="display: flex; flex-direction: row; align-items:center; justify-content: center; gap: 1rem;">
+                        <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem;">
                             <h4>Muhamad Singgih Prasetyo    - 10122095</h4>
                             <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/Singgih.jpg"  style="width:auto; height: auto;">
                         <div> 
@@ -124,16 +124,16 @@ if (selected == '4. Identitas Kelompok') :
     with tab2:
         with st.container():
             st.write("""
-                        <div style="display: flex; flex-direction: column; align-items:center; justify-content: center;">
+                        <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem">
                                 <h4>Muhammad Mizan Al Mujadid   - 10122096</h4>
-                                <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="width:auto;">
+                                <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Mizan.png"  style="width:auto; height: auto">
                         </div>
                     """, unsafe_allow_html=True)
 
     with tab3:
         with st.container():
             st.write("""
-                        <div style="display: flex; flex-direction: row; align-items:center; justify-content: center; gap: 1rem;">
+                        <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem;">
                             <h4>Muhammad Raffy Abdillah     - 10122099</h4>
                             <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Rapi.jpg"  style="width:auto; height: auto;">
                         <div> 
