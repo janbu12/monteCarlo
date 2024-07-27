@@ -110,8 +110,7 @@ def questionPenjualan(dataset1, dataset2):
                             <li>PROD-0000029: alpukat 1 kg</li>
                             <li>PROD-0000036: nangka 1 kg</li>
                             <li>PROD-0000039: rambutan 1 kg</li>
-                            <li>PROD-0000020: snack gurih 1 ons</li>
-                            <li>PROD-0000020: snack gurih 1 ons</li>
+                            <li>dll</li>
                         </list><br>
                         Lalu produk dengan prediksi terkecil atau berkemungkinan memiliki penjualan yang stagnand:
                         <list>
@@ -126,7 +125,8 @@ def questionPenjualan(dataset1, dataset2):
                             <li>PROD-0000021: kacang goreng 1 kg</li>
                             <li>PROD-0000027: jeruk 1 kg</li>
                             <li>dll
-                        </list><br><br>Oleh karena itu perusahaan harus memiliki beberapa strategi untuk menangani produk yang berkemungkinan penjualannya stagnand
+                        </list><br><br>Oleh karena itu perusahaan harus memiliki beberapa strategi untuk menangani produk yang berkemungkinan 
+                        penjualannya stagnand, dan menyiapkan jumlah produksi untuk produk yang memiliki prediksi baik
                      """, unsafe_allow_html=True) 
             
 
@@ -468,53 +468,58 @@ def questionKaryawan(dataset1, dataset2, dataset3):
         st.write("<h2>Hasil Model Simulasi Prediksi Kinerja Karyawan Berdasarkan Banyaknya Transaksi Menggunakan LCG</h2>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Januari</h4>", unsafe_allow_html=True)
-        st.dataframe(januari, use_container_width=True, hide_index=True)
+        st.dataframe(januari.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Februari</h4>", unsafe_allow_html=True)
-        st.dataframe(februari, use_container_width=True, hide_index=True)
+        st.dataframe(februari.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Maret</h4>", unsafe_allow_html=True)
-        st.dataframe(maret, use_container_width=True, hide_index=True)
+        st.dataframe(maret.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan April</h4>", unsafe_allow_html=True)
-        st.dataframe(april, use_container_width=True, hide_index=True)
+        st.dataframe(april.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Mei</h4>", unsafe_allow_html=True)
-        st.dataframe(mei, use_container_width=True, hide_index=True)
+        st.dataframe(mei.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Juni</h4>", unsafe_allow_html=True)
-        st.dataframe(juni, use_container_width=True, hide_index=True)
+        st.dataframe(juni.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Juli</h4>", unsafe_allow_html=True)
-        st.dataframe(juli, use_container_width=True, hide_index=True)
+        st.dataframe(juli.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Agustus</h4>", unsafe_allow_html=True)
-        st.dataframe(agustus, use_container_width=True, hide_index=True)
+        st.dataframe(agustus.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan September</h4>", unsafe_allow_html=True)
-        st.dataframe(september, use_container_width=True, hide_index=True)
+        st.dataframe(september.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Oktober</h4>", unsafe_allow_html=True)
-        st.dataframe(oktober, use_container_width=True, hide_index=True)
+        st.dataframe(oktober.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan November</h4>", unsafe_allow_html=True)
-        st.dataframe(november, use_container_width=True, hide_index=True)
+        st.dataframe(november.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
         st.write("<h4>Bulan Desember</h4>", unsafe_allow_html=True)
-        st.dataframe(desember, use_container_width=True, hide_index=True)
+        st.dataframe(desember.style.highlight_max(subset='Prediksi', axis=0, color='#198754'), use_container_width=True, hide_index=True)
         st.write("<br>", unsafe_allow_html=True)
         
+        with st.expander("Kesimpulan dari Model Simulasi diatas:") :
+            st.write("""
+                        Dari simulasi diatas kita bisa melihat bahwa terdapat prediksi kinerja karyawan yang meningkat atau konstan, oleh karena
+                        itu perusahaan dapat memberi pengghargaan atau pelatihan tambahan pada karyawan yang bersangkutan
+                     """)
     
         
         

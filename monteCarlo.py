@@ -26,8 +26,8 @@ st.markdown("""
 
 with st.sidebar :
     selected = option_menu('Monte Carlo',
-                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4. Identitas Kelompok'],
-                           icons = ["bi bi-box-seam-fill", "bi bi-bar-chart-steps", "bi bi-clipboard-data-fill", "bi bi-person-vcard-fill"],
+                           ['1. Deskripsi Model', '2. Metode dan Data', '3. Simulasi dan Hasil Model', '4. Kesimpulan' , '5. Identitas Kelompok'],
+                           icons = ["bi bi-box-seam-fill", "bi bi-bar-chart-steps", "bi bi-clipboard-data-fill", "bi bi-journal-text","bi bi-person-vcard-fill"],
                            menu_icon = "bi bi-pie-chart-fill",
                            default_index = 0,
                            styles={"nav" : {"font-family" : 'Poppins'},
@@ -78,22 +78,22 @@ if (selected == '2. Metode dan Data') :
             
     with tab3:
         with st.container():
-            st.write("<h2>Data Produk</h2>", unsafe_allow_html=True)
+            st.write("<h2>Data Head Produk</h2>", unsafe_allow_html=True)
             st.write("Ini merupakan data head dari data produk", unsafe_allow_html=True)
             st.dataframe(produk.head())
             
         with st.container():
-            st.write("<h2>Data Penjualan</h2>", unsafe_allow_html=True)
+            st.write("<h2>Data Head Penjualan</h2>", unsafe_allow_html=True)
             st.write("Ini merupakan data head dari data penjualan", unsafe_allow_html=True)
             st.dataframe(penjualan.head())
         
         with st.container():
-            st.write("<h2>Data Karyawan</h2>", unsafe_allow_html=True)
+            st.write("<h2>Data Head Karyawan</h2>", unsafe_allow_html=True)
             st.write("Ini merupakan data head dari data karyawan", unsafe_allow_html=True)
             st.dataframe(karyawan.head())
             
         with st.container():
-            st.write("<h2>Data Cabang</h2>", unsafe_allow_html=True)
+            st.write("<h2>Data Head Cabang</h2>", unsafe_allow_html=True)
             st.write("Ini merupakan data head dari data cabang", unsafe_allow_html=True)
             st.dataframe(cabang.head())
     
@@ -107,8 +107,15 @@ if (selected == '3. Simulasi dan Hasil Model') :
     with tab2:
         questionKaryawan(karyawan, penjualan, cabang)
         
+if (selected == '4. Kesimpulan') :
+    st.header("Kesimpulan")
+    st.write("""
+                Berdasarkan analisis data dan hasil simulasi, dapat disimpulkan bahwa tujuan diawal sesuai dengan simulasinya, karena
+                dengan hasil data disimulasi sebelumnya, perusahaan dapat sekiranya menangani masalah yang berkaitan dengan stok dan tren penjualan,
+                serta pengghargaan atau pelatihan tambahan pada karyawan.
+             """)
     
-if (selected == '4. Identitas Kelompok') :
+if (selected == '5. Identitas Kelompok') :
     st.header("Identitas Kelompok")
     tab1, tab2, tab3 = st.tabs(["10122095", "10122096", "10122099"])
 
@@ -117,7 +124,7 @@ if (selected == '4. Identitas Kelompok') :
             st.write("""
                         <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem;">
                             <h4>Muhamad Singgih Prasetyo    - 10122095</h4>
-                            <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/Singgih.jpg"  style="width:auto; height: auto;">
+                            <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Singgih.jpg"  style="width:auto; height: auto;">
                         <div> 
                     """, unsafe_allow_html=True)
 
@@ -135,6 +142,6 @@ if (selected == '4. Identitas Kelompok') :
             st.write("""
                         <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem;">
                             <h4>Muhammad Raffy Abdillah     - 10122099</h4>
-                            <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/20231215_164131.jpg"  style="width:auto; height: auto;">
+                            <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Rapi.jpg"  style="width:auto; height: auto;">
                         <div> 
                     """, unsafe_allow_html=True)
