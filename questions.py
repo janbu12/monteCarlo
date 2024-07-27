@@ -15,7 +15,6 @@ def get_prediksi(angka_acak, intervalsAcak, intervals):
 
 
 def questionPenjualan(dataset1, dataset2):
-    # st.write("<h3>Simulasi Prediksi Penjualan Produk Selama 1 tahun Kedepan</h3>", unsafe_allow_html=True)
     
     penjualan_produk = dataset2.merge(dataset1, on='kode_produk', suffixes=('_penjualan', '_produk'), validate='m:1')
     penjualan_produk = penjualan_produk.groupby(['kode_produk', 'nama_produk'])['jumlah_pembelian'].sum().reset_index()
@@ -23,8 +22,10 @@ def questionPenjualan(dataset1, dataset2):
     # Menentukan batas bawah dan batas atas
     min_val = penjualan_produk['jumlah_pembelian'].min()
     max_val = penjualan_produk['jumlah_pembelian'].max()
-    interval_size = (max_val - min_val) // 6  # Misalkan 6 interval kelas
-    bins = np.arange(min_val, max_val + interval_size + 1, interval_size)  # Perbaiki batas atas
+    
+    # Menentukan interval kelas (sudah hasil rumus interval kelas)
+    interval_size = (max_val - min_val) // 6  
+    bins = np.arange(min_val, max_val + interval_size + 1, interval_size)  
 
     # Menghitung frekuensi
     penjualan_produk['Interval'] = pd.cut(penjualan_produk['jumlah_pembelian'], bins=bins, include_lowest=True)
@@ -46,7 +47,6 @@ def questionPenjualan(dataset1, dataset2):
     boundaries_df['Jumlah Angka Acak'] = (total_random_numbers * boundaries_df['Probabilitas Kumulatif']).round().astype(int)
 
     # Menghitung interval angka acak
-    # boundaries_df['Interval Angka Acak'] = boundaries_df['Jumlah Angka Acak'].cumsum()
 
     # Menentukan batas bawah acak dan batas atas acak
     boundaries_df['Batas Bawah Acak'] = np.concatenate(([0], boundaries_df['Jumlah Angka Acak'].iloc[:-1].values + 1))
@@ -173,7 +173,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     min_val = all_months_data.min()
     max_val = all_months_data.max()
 
-    # Menentukan ukuran interval (misalkan 6 interval kelas)
+    # Menentukan ukuran interval (sudah hasil rumus interval kelas)
     interval_size = (max_val - min_val) // 8
     bins = np.arange(min_val, max_val + interval_size + 1, interval_size)
 
@@ -214,7 +214,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     januari.loc[:, 'Zi-1'] = lcg_values[:-1]
     januari.loc[:, 'Zi'] = lcg_values[1:]
 
-    januari.loc[:, 'Angka Acak'] = januari['Zi'] % 101  # Generate random numbers
+    januari.loc[:, 'Angka Acak'] = januari['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -234,7 +234,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     februari.loc[:, 'Zi-1'] = lcg_values[:-1]
     februari.loc[:, 'Zi'] = lcg_values[1:]
 
-    februari.loc[:, 'Angka Acak'] = februari['Zi'] % 101  # Generate random numbers
+    februari.loc[:, 'Angka Acak'] = februari['Zi'] % 101 
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -254,7 +254,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     maret.loc[:, 'Zi-1'] = lcg_values[:-1]
     maret.loc[:, 'Zi'] = lcg_values[1:]
 
-    maret.loc[:, 'Angka Acak'] = maret['Zi'] % 101  # Generate random numbers
+    maret.loc[:, 'Angka Acak'] = maret['Zi'] % 101 
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -274,7 +274,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     april.loc[:, 'Zi-1'] = lcg_values[:-1]
     april.loc[:, 'Zi'] = lcg_values[1:]
 
-    april.loc[:, 'Angka Acak'] = april['Zi'] % 101  # Generate random numbers
+    april.loc[:, 'Angka Acak'] = april['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -294,7 +294,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     mei.loc[:, 'Zi-1'] = lcg_values[:-1]
     mei.loc[:, 'Zi'] = lcg_values[1:]
 
-    mei.loc[:, 'Angka Acak'] = mei['Zi'] % 101  # Generate random numbers
+    mei.loc[:, 'Angka Acak'] = mei['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -314,7 +314,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     juni.loc[:, 'Zi-1'] = lcg_values[:-1]
     juni.loc[:, 'Zi'] = lcg_values[1:]
 
-    juni.loc[:, 'Angka Acak'] = juni['Zi'] % 101  # Generate random numbers
+    juni.loc[:, 'Angka Acak'] = juni['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -334,7 +334,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     juli.loc[:, 'Zi-1'] = lcg_values[:-1]
     juli.loc[:, 'Zi'] = lcg_values[1:]
 
-    juli.loc[:, 'Angka Acak'] = juli['Zi'] % 101  # Generate random numbers
+    juli.loc[:, 'Angka Acak'] = juli['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -354,7 +354,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     agustus.loc[:, 'Zi-1'] = lcg_values[:-1]
     agustus.loc[:, 'Zi'] = lcg_values[1:]
 
-    agustus.loc[:, 'Angka Acak'] = juli['Zi'] % 101  # Generate random numbers
+    agustus.loc[:, 'Angka Acak'] = juli['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -374,7 +374,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     september.loc[:, 'Zi-1'] = lcg_values[:-1]
     september.loc[:, 'Zi'] = lcg_values[1:]
 
-    september.loc[:, 'Angka Acak'] = juli['Zi'] % 101  # Generate random numbers
+    september.loc[:, 'Angka Acak'] = juli['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -394,7 +394,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     oktober.loc[:, 'Zi-1'] = lcg_values[:-1]
     oktober.loc[:, 'Zi'] = lcg_values[1:]
 
-    oktober.loc[:, 'Angka Acak'] = oktober['Zi'] % 101  # Generate random numbers
+    oktober.loc[:, 'Angka Acak'] = oktober['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -414,7 +414,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     november.loc[:, 'Zi-1'] = lcg_values[:-1]
     november.loc[:, 'Zi'] = lcg_values[1:]
 
-    november.loc[:, 'Angka Acak'] = november['Zi'] % 101  # Generate random numbers
+    november.loc[:, 'Angka Acak'] = november['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
@@ -434,7 +434,7 @@ def questionKaryawan(dataset1, dataset2, dataset3):
     desember.loc[:, 'Zi-1'] = lcg_values[:-1]
     desember.loc[:, 'Zi'] = lcg_values[1:]
 
-    desember.loc[:, 'Angka Acak'] = november['Zi'] % 101  # Generate random numbers
+    desember.loc[:, 'Angka Acak'] = november['Zi'] % 101  
 
     intervalsAcak = list(zip(boundaries_df_karyawan['Batas Bawah Acak'], boundaries_df_karyawan['Batas Atas Acak']))
     intervals= list(zip(boundaries_df_karyawan['Batas Bawah'], boundaries_df_karyawan['Batas Atas']))
