@@ -123,7 +123,7 @@ if (selected == '5. Identitas Kelompok') :
         with st.container():
             st.write("""
                         <div style="display: flex; flex-direction: column; align-items:center; justify-content: center; gap: 1rem;">
-                            <h4>Muhamad Singgih Prasetyo    - 10122095</h4>
+                            <h4>Muhamad Singgih Prasetyo Baru    - 10122095</h4>
                             <img src="https://raw.githubusercontent.com/janbu12/monteCarlo/main/foto/Singgih.jpg"  style="max-width:350px;">
                         <div> 
                     """, unsafe_allow_html=True)
